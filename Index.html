@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Meta tags para codificación de caracteres y ajuste de visualización en dispositivos móviles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Inclusión de bibliotecas de fuentes y estilos (Font Awesome y Swiper) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Inclusión de scripts para el funcionamiento del slider (Swiper) -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <script defer src="main.js"></script>
+
+    <!-- Título de la página -->
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <!-- Contenedor principal de la página -->
     <main>
+        <!-- Barra lateral de navegación con enlaces de las secciones -->
         <aside>
             <ul class="links">
+                <!-- Cada enlace activa una función de navegación para cambiar la sección mostrada -->
+                <img class="logo2" src="logo2.jpg" alt="">
                 <li onclick="Navigate(0)" class="activelink"><i class="fa-solid fa-house"></i>
-                    <p>Home</p>
+                    <p>Inicio</p>
                 </li>
                 <li onclick="Navigate(1)"><i class="fa-solid fa-user"></i>
-                    <p>About Me</p>
+                    <p>Quienes somos</p>
                 </li>
                 <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
-                    <p>Services</p>
+                    <p>Servicios</p>
                 </li>
                 <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
-                    <p>Gallery</p>
+                    <p>Articulos</p>
                 </li>
                 <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
-                    <p>Contact Me</p>
+                    <p>Contacto</p>
                 </li>
             </ul>
         </aside>
+
+        <!-- Contenedor principal del Swiper (slider) -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
+                <!-- Primer slide: Home -->
                 <div class="swiper-slide home-slide">
                     <div class="HomeContent">
-                        <h1>Hi I'm <span class="stylized-name">----</span>,</h1>
-                        <h2>A <span class="proffesions">Web Developer</span></h2>
-                        <p class="heroline">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum placeat, quisquam a quam optio quibusdam pariatur sit? Cupiditate mollitia quos repellendus doloremque iure? Tempore minus aspernatur deleniti nesciunt quod exercitationem!</p>
+                        <h1>Vi&El<span class="stylized-name"></span></h1>
+                        <p>Impulsamos tu crecimiento financiero con soluciones contables a tu medida<span
+                                class="proffesions"></span></p>
+                        <p class="heroline"></p>
                         <div class="buttonGroup">
-                            <button>Hire Me</button>
-                            <button>Contact Me</button>
+                            <button>Servicios</button>
+                            <button>Contacto</button>
                         </div>
                     </div>
                     <div class="SideImg">
@@ -49,24 +66,26 @@
                             <hr class="hr1">
                             <hr class="hr2">
                         </div>
-                        <img src="contable.jpg" alt="">
+                        <img src="logo.jpg" alt="">
                         <div class="bottom-left-corner">
                             <hr class="hr1">
                             <hr class="hr1">
                         </div>
-                        <p class="slide-help">Scroll for next slide <i class="fa-solid fa-chevron-right fa-shake"></i></p>
+                        <p class="slide-help">Continuar <i class="fa-solid fa-chevron-right fa-shake"></i></p>
                     </div>
                 </div>
+
+                <!-- Segundo slide: About Me -->
                 <div class="swiper-slide">
                     <div class="about-us">
-                        <h1 class="heading">About Me</h1>
-                        <h3 class="sub-heading">I'm <span class="proffesions">A Web Developer</span></h3>
-                        <p class="aboutme-details">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro fuga soluta nisi dolore quisquam sit non! Modi quisquam reiciendis possimus quas fugiat atque praesentium corrupti optio, recusandae architecto voluptates?
-                        </p>
+                        <h1 class="heading">Expertos contables</h1>
+                        <h3 class="sub-heading">Tenemos amplia experiencia <span class="proffesions">con profesionistas
+                                altamente capacitados</span></h3>
+                        <p class="aboutme-details">Contadores Financieros, Contadores publicos, expextor en Finanzas,
+                            planeadores Financieros.</p>
                         <div class="about-me-division">
                             <div class="about-me-table">
-                                <li><span>Experience</span> 5+ years</li>
+                                <li><span>Experience</span> 5+ años</li>
                                 <li><span>Country:</span> Mexico</li>
                                 <li><span>Availability</span> 24/7</li>
                                 <li><span>Satisfied Clients</span> 200+</li>
@@ -79,6 +98,7 @@
                                     <button>Contact Me</button>
                                 </div>
                             </div>
+                            <!-- Barra de habilidades -->
                             <div class="skill-bar">
                                 <li>
                                     <p>HTML</p>
@@ -112,75 +132,94 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Tercer slide: Services -->
                 <div class="swiper-slide services">
-                    <h1 class="heading">Services</h1>
+                    <h1 class="heading">Servicios</h1>
+                    <!-- Cada servicio mostrado con su ícono y descripción -->
                     <div class="service">
-                        <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
-                        <h2>Web Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus nemo reprehenderit corrupti iusto odio earum numquam expedita officia vel corporis doloribus illo nihil culpa labore, incidunt, quam in ullam cum.</p>
+                        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h2>Contabilidad Financiera y fiscal</h2>
+                        <p>Planes a tu medida para tener el control de tus finanzas e impuestos</p>
                     </div>
                     <div class="service">
                         <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
                         <h2>Web Development</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, corporis. Asperiores, eum assumenda non libero impedit sed harum adipisci quis eveniet! Ducimus nostrum voluptate vitae corrupti tenetur incidunt consequatur cupiditate.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                     <div class="service">
                         <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
                         <h2>SEO</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod ipsum similique qui ullam autem! Earum, quisquam ab! Maiores deleniti a necessitatibus libero repudiandae temporibus cumque, labore quasi quia officia autem.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                     <div class="service">
                         <div class="service-icon"><i class="fa-solid fa-image"></i></div>
                         <h2>Graphic Design</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, praesentium. Cumque, hic, omnis eligendi ipsam quasi architecto quis itaque ipsa, quas deleniti minus voluptates eum! Numquam illo dolore harum doloribus.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                     <div class="service">
                         <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
                         <h2>Software Development</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat ipsa perspiciatis ratione quod nemo quae quo, nesciunt voluptatem velit praesentium unde laudantium asperiores sint odit repudiandae? Dolor voluptas sapiente fugit?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                     <div class="service">
                         <div class="service-icon"><i class="fa-solid fa-database"></i></div>
                         <h2>Database Admin</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ipsa laudantium amet ad, quos beatae facere esse ullam dolor excepturi tenetur exercitationem quasi alias magni. Facere minus quod ad? Non?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                     </div>
                 </div>
-                <div class="swiper-slide gallery">
-                    <h1 class="heading">Gallery</h1>
-                    <div class="project"><img src="contable.jpg" alt=""></div>
-                    <div class="project"><img src="contable.jpg" alt=""></div>
-                    <div class="project"><img src="contable.jpg" alt=""></div>
-                    <div class="project"><img src="contable.jpg" alt=""></div>
-                    <div class="project"><img src="contable.jpg" alt=""></div>
-                    <div class="project"><img src="contable.jpg" alt=""></div>
+
+                <!-- Cuarto slide: Articulos -->
+                <div class="swiper-slide Articulos">
+                    <h1 class="heading">Articulos</h1>
+                    <!-- Insertar otro archivo HTML con un iframe -->
+                    <iframe src="RESICO/index.html" width="100%" height="600px"></iframe>
                 </div>
+
+                <!-- Quinto slide: Contact Me -->
                 <div class="swiper-slide contactMe">
-                    <h1 class="heading">Contact Me</h1>
+                    <h1 class="heading">Contacto</h1>
+                    <!-- Información de contacto -->
                     <div class="contactinfo"><i class="fa-solid fa-phone"></i>
                         <h3>Mobile No</h3>
                         <p>123-456-789</p>
                     </div>
                     <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
                         <h3>Location</h3>
-                        <p>Somewhere on Earth</p>
+                        <p>CDMX</p>
                     </div>
                     <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
                         <h3>Email</h3>
                         <p>abc123@hotmail.com</p>
                     </div>
+
+                     <!-- Contador de visitas -->
+                     <div id="contador">
+                        <i class="fa-solid fa-eye"></i>
+                        <p>Visitas: <span id="contador-numero">0</span></p>
+                        <p><span id="contador"></span></p>
+                    </div>                    
+                    <script>
+                        fetch('contador.php')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById("contador").textContent = data;
+                            });
+                    </script>
+                    <p><span id="contador"></span></p>
+                    <!-- Formulario de contacto -->
                     <div class="contactform">
-                        <form action="">
-                            <input type="text" name="name" placeholder="Name" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                            <textarea name="message" rows="5" placeholder="Message" required></textarea>
-                            <button type="submit">Send</button>
-                        </form>
+                        <a href="./form.html">
+                            <button class="primary">Contactanos</button>
+                        </a>
                     </div>
+                    
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Inicialización del Swiper con opciones -->
     <script>
         var swiper = new Swiper(".swiper", {
             effect: "cube",
@@ -195,6 +234,7 @@
             mousewheel: true
         });
 
+        // Función para navegar entre las secciones de la página
         function Navigate(indx) {
             document.querySelectorAll(".links li").forEach(item => item.classList.remove("activelink"));
             let links = document.querySelectorAll(".links li");
@@ -205,4 +245,5 @@
         }
     </script>
 </body>
+
 </html>

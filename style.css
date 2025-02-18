@@ -111,7 +111,7 @@ aside li i {
 }
 
 .bottom-left-corner {
-    left: -50px;
+    left: 50px;
     bottom: -50px;
     rotate: -90deg;
 }
@@ -123,17 +123,17 @@ aside li i {
 }
 
 .hr1 {
-    width: 150px;
-    height: 10px;
+    width: 0px;
+    height: 0px;
     border: none;
     background: #80ed99;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .hr2 {
-    width: 10px;
-    height: 120px;
+    width: 0px;
+    height: 0px;
     border-bottom-left-radius: 3px;
 
     background: #80ed99;
@@ -154,6 +154,14 @@ aside li i {
 
 }
 
+.logo2 {
+    width: 150px;  /* Ajusta el tamaño de la imagen */
+    height: auto;  /* Mantiene la proporción */
+    display: block;  /* Hace que la imagen sea un bloque */
+    margin: 0 auto;  /* Centra la imagen horizontalmente */
+    
+}
+
 .HomeContent h1 .stylized-name {
     font: #80ed99;    
 }
@@ -163,9 +171,9 @@ aside li i {
 }
 
 .HomeContent .heroline {
-    font-size: 1.5rem;
+    font-size: 9rem;
     font-weight: 300;
-    padding-right: 50px;
+    padding-right: 300px;
 }
 
 .buttonGroup {
@@ -191,7 +199,7 @@ aside li i {
     position: absolute;
     bottom: 10px;
     width: 100%;
-    text-align: center;
+    text-align: right;
     font-weight: 400;
     z-index: 100;
     left: 0%;
@@ -201,16 +209,17 @@ aside li i {
 }
 
 .mySwiper {
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
     background-color: #343a40;
 }
 
+/* estylos del contenedor derecho*/
 .swiper-slide {
     width: 100%;
 
-    background-color: #343a40;
+    background-color: #707070;
     height: 100%;   
 }
 
@@ -513,3 +522,30 @@ form h2 .SocialLinks i:hover{
 .about-us{
     overflow: auto;
 }
+/* Estilo del contador de visitas */
+#contador {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #212529;  /* Color de fondo similar al sidebar */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#contador i {
+    color: #80ed99; /* Color verde neón */
+    font-size: 1.2rem;
+}
+
+#contador span {
+    font-weight: 700;
+}
+

@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffefe;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #009688;
+    color: white;
+}
+
+main {
+    padding: 20px;   
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(252, 252, 252);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+p {
+    margin: 5px 0 15px;
+    color: #555;
+}
+
+footer {
+    background-color: #009688;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+footer a:hover {
+    background-color: white;
+    color: #009688;
+}
+
+/* Estilos para las secciones de tasas */
+.rates ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.rates li {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.rates p {
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+/* Estilo para los enlaces de navegación */
+span {
+    margin: 0 15px;
+    font-weight: bold;
+    color: #009688;
+    cursor: pointer;
+}
+
+span:hover {
+    text-decoration: underline;
+}

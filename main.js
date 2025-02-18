@@ -29,3 +29,10 @@ function Navigate(indx) {
     // Mueve el swiper al slide deseado
     swiper.slideTo(indx, 1000, true);
 }
+//contador de visitas
+document.addEventListener("DOMContentLoaded", function () {
+    let count = localStorage.getItem("visitCount") || 0;
+    count++;
+    localStorage.setItem("visitCount", count);
+    document.getElementById("contador-numero").textContent = count;
+});
