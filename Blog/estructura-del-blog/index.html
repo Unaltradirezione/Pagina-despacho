@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blog Contable</title>
+</head>
+
+<body>
+    <!-- Contenedor de pestañas (Menú Lateral) -->
+    <div class="tabs">
+        <button class="tab" onclick="showTab('declaraciones', event)">Declaraciones Fiscales</button>
+        <button class="tab" onclick="showTab('deducibles', event)">Deducibles y Gastos</button>
+        <button class="tab" onclick="showTab('cfdi', event)">CFDI y Facturación</button>
+        <button class="tab" onclick="showTab('retenciones', event)">Retenciones e Impuestos</button>
+        <button class="tab" onclick="showTab('fundamento', event)">Fundamento CFDI Adquisición de Mercancías</button>
+
+        <!-- Botón de Modo Oscuro -->
+        <button id="darkModeToggle" onclick="toggleDarkMode()" class="dark-mode-toggle">
+            <i id="darkModeIcon" class="fas fa-sun"></i> <!-- Icono de sol/luna -->
+        </button>
+    </div>
+
+    <!-- Contenedor de contenido dinámico -->
+    <div class="content-container">
+        <div id="declaraciones" class="content">
+            <iframe src="posts/declaraciones.html" width="100%" height="600px" style="border:none;"></iframe>
+        </div>
+        <div id="deducibles" class="content" style="display:none;">
+            <iframe src="posts/deducibles.html" width="100%" height="600px" style="border:none;"></iframe>
+        </div>
+        <div id="cfdi" class="content" style="display:none;">
+            <iframe src="posts/cfdi.html" width="100%" height="600px" style="border:none;"></iframe>
+        </div>
+        <div id="retenciones" class="content" style="display:none;">
+            <iframe src="posts/retenciones.html" width="100%" height="600px" style="border:none;"></iframe>
+        </div>
+        <div id="fundamento" class="content" style="display:none;">
+            <iframe src="g01-adquisicion-de-mercancias/index.html" width="100%" height="600px" style="border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- Enlace del archivoJS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -171,9 +171,25 @@
 
                 <!-- Cuarto slide: Articulos -->
                 <div class="swiper-slide Articulos">
-                    <h1 class="heading">Articulos</h1>
-                    <!-- Insertar otro archivo HTML con un iframe -->
-                    <iframe src="RESICO/index.html" width="100%" height="600px"></iframe>
+                    <h1 class="heading">Artículos</h1>
+
+                    <!-- Campo de búsqueda -->
+                    <input type="text" id="search" onkeyup="searchArticles()" placeholder="Buscar artículos..."
+                        class="search-bar">
+
+                    <!-- Lista de artículos -->
+                    <ul id="lista-articulos">
+                        <li onclick="cargarArticulo('RESICO/index.html')">Régimen RESICO</li>
+                        <li
+                            onclick="cargarArticulo('Blog/estructura-del-blog/index.html')">
+                            Adquisición de Mercancías
+                        </li>
+                        <!-- Puedes agregar más artículos aquí -->
+                    </ul>
+
+                    <!-- Contenedor del artículo (se actualizará dinámicamente) -->
+                    <iframe id="visor-articulo" src="" width="100%" height="600px"></iframe>
+
                 </div>
 
                 <!-- Quinto slide: Contact Me -->
@@ -193,12 +209,12 @@
                         <p>ayuda_contratacion@vie-el.com</p>
                     </div>
 
-                     <!-- Contador de visitas -->
-                     <div id="contador">
+                    <!-- Contador de visitas -->
+                    <div id="contador">
                         <i class="fa-solid fa-eye"></i>
                         <p>Visitas: <span id="contador-numero">0</span></p>
                         <p><span id="contador"></span></p>
-                    </div>                    
+                    </div>
                     <script>
                         fetch('contador.php')
                             .then(response => response.text())
@@ -213,7 +229,7 @@
                             <button class="primary">Contactanos</button>
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -243,6 +259,30 @@
             }
             swiper.slideTo(indx, 1000, true);
         }
+
+        // Función para cargar el artículo en el iframe
+        function cargarArticulo(url) {
+            document.getElementById("visor-articulo").src = url;
+        }
+
+        // Función para filtrar los artículos según la búsqueda
+        function searchArticles() {
+            var input, filter, ul, li, i, txtValue;
+            input = document.getElementById('search');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("lista-articulos");
+            li = ul.getElementsByTagName('li');
+
+            for (i = 0; i < li.length; i++) {
+                txtValue = li[i].textContent || li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
     </script>
 </body>
 
